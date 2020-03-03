@@ -13,13 +13,13 @@ import java.util.Scanner;
  */
 public class Clase3 {
     public static void main(String[] args) {
-       /*Scanner l = new Scanner(System.in);
-       int a = 0 , b = 0 , s = 0 , r = 0, m = 0; 
-       float d = 0;
+       //ejercicio #1//
+       Scanner l = new Scanner(System.in);
+       double d = 0, b = 0 , s = 0 , r = 0, m = 0, a = 0;
        System.out.println ("primer numero: ");
-       a = l.nextInt();
+       a = l.nextDouble();
        System.out.println ("segundo numero: ");
-       b = l.nextInt();
+       b = l.nextDouble();
        s = a + b;
        r = a - b;
        m = a * b;
@@ -40,10 +40,11 @@ public class Clase3 {
         }
     }
     
-}*/
-       Scanner l = new Scanner(System.in);
-       int a = 0 , n = 0 , n1 = 0 , s = 0 , r = 0 , m = 0; 
-       double d = 0;
+}
+     //ejercicio #2//
+       /* Scanner l = new Scanner(System.in);
+       int a = 0  ; 
+       double d = 0, n = 0 , n1 = 0, s = 0 , r = 0 , m = 0;
        System.out.println ("1. suma ");
        System.out.println ("2. resta ");
        System.out.println ("3. multiplicacion ");
@@ -51,13 +52,13 @@ public class Clase3 {
        System.out.println ("su opcion: ");
        a = l.nextInt();
        System.out.println ("primer numero: ");
-       n = l.nextInt();
+       n = l.nextDouble();
        System.out.println ("segundo numero: ");
-       n1 = l.nextInt();
+       n1 = l.nextDouble();
        s = n + n1;
        r = n - n1;
        m = n * n1;
-       String d = n / n1;
+       d = n / n1;
     if (a == 1){
        System.out.println ("la suma es: "+ s);
     }else{
@@ -68,7 +69,10 @@ public class Clase3 {
                System.out.println ("la mul es: "+ m);
             }else{
                if (a == 4){
-               System.out.printf("%.3f %n", d);
+               System.out.printf("la div es: "+ d);
             }
-        }
-    }       
+           }
+       }
+    }
+}   
+}*/
