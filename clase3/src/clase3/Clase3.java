@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Clase3 {
     public static void main(String[] args) {
-       //ejercicio #1//
+       //ejercicio #1
        Scanner l = new Scanner(System.in);
        double d = 0, b = 0 , s = 0 , r = 0, m = 0, a = 0;
        System.out.println ("primer numero: ");
@@ -41,7 +41,7 @@ public class Clase3 {
     }
     
 }
-     //ejercicio #2//
+     //ejercicio #2
        /* Scanner l = new Scanner(System.in);
        int a = 0  ; 
        double d = 0, n = 0 , n1 = 0, s = 0 , r = 0 , m = 0;
