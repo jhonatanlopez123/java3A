@@ -34,6 +34,7 @@ public class JavaApplication11 {
                    case 1 :
                        int w[] = {1,2,3,4,5};
                        int v[] = {0,0,0,0,0};
+                       int x[] = {0,0,0,0,0};
                        max=20;
                        System.out.println("a escogido el nivel basico");
                        while(b==0){
@@ -45,10 +46,17 @@ public class JavaApplication11 {
                          dado1 =((int)(Math.random()*(6-1+1)+1));
                          dado2 =((int)(Math.random()*(6-1+1)+1));
                          w[i] = dado1 + dado2;
+                         if (dado1==dado2){
+                         x[i] = x[i]+1;
+                         } 
                          v[i] = v[i]+w[i];
+                         if(v[i]>20){        //este if hace que el jugador no gane hasta que tenga
+                          v[i] = v[i]-w[i];    // un puntaje de 20 exatos ni mas ni menos.
+                         }
                          System.out.println("dado1: "+dado1+" dado2: "+dado2+" suma de ambos: "+w[i]);
                          System.out.println(" n.1 "+v[1]+" || n.2 "+v[2]+" || n.3 "+v[3]+" || n.4 "+v[4]);
-                         if(v[i]>=20){
+                         
+                         if(v[i]==max || x[i]==3){
                           System.out.println("el ganadoe es: "+i);
                           i=6;
                           b=1;
@@ -68,8 +76,9 @@ public class JavaApplication11 {
                     case 2 :
                        int w2[] = {1,2,3,4,5};
                        int v2[] = {0,0,0,0,0};
-                       max=20;
-                       System.out.println("a escogido el nivel basico");
+                       int x2[] = {0,0,0,0,0};
+                       max=30;
+                       System.out.println("a escogido el nivel intermedio");
                        while(b==0){
                        for(i=1;i<=a;i++){
                          System.out.println("------------------------"); 
@@ -79,10 +88,13 @@ public class JavaApplication11 {
                          dado1 =((int)(Math.random()*(6-1+1)+1));
                          dado2 =((int)(Math.random()*(6-1+1)+1));
                          w2[i] = dado1 + dado2;
+                         if (dado1==dado2){
+                         x2[i] = x2[i]+1;
+                         } 
                          v2[i] = v2[i]+w2[i];
                          System.out.println("dado1: "+dado1+" dado2: "+dado2+" suma de ambos: "+w2[i]);
                          System.out.println(" n.1 "+v2[1]+" || n.2 "+v2[2]+" || n.3 "+v2[3]+" || n.4 "+v2[4]);
-                         if(v2[i]>=20){
+                         if(v2[i]>=max || x2[i]==3){
                           System.out.println("el ganadoe es: "+i);
                           i=6;
                           b=1;
@@ -102,8 +114,9 @@ public class JavaApplication11 {
                     case 3 :
                        int w3[] = {1,2,3,4,5};
                        int v3[] = {0,0,0,0,0};
-                       max=20;
-                       System.out.println("a escogido el nivel basico");
+                       int x3[] = {0,0,0,0,0};
+                       max=50;
+                       System.out.println("a escogido el nivel avanzado");
                        while(b==0){
                        for(i=1;i<=a;i++){
                          System.out.println("------------------------"); 
@@ -113,10 +126,13 @@ public class JavaApplication11 {
                          dado1 =((int)(Math.random()*(6-1+1)+1));
                          dado2 =((int)(Math.random()*(6-1+1)+1));
                          w3[i] = dado1 + dado2;
+                         if (dado1==dado2){
+                         x3[i] = x3[i]+1;
+                         } 
                          v3[i] = v3[i]+w3[i];
                          System.out.println("dado1: "+dado1+" dado2: "+dado2+" suma de ambos: "+w3[i]);
                          System.out.println(" n.1 "+v3[1]+" || n.2 "+v3[2]+" || n.3 "+v3[3]+" || n.4 "+v3[4]);
-                         if(v3[i]>=20){
+                         if(v3[i]>=max || x3[i]==3){
                           System.out.println("el ganadoe es: "+i);
                           i=6;
                           b=1;
