@@ -61,3 +61,18 @@ public class Clase4 {
        System.out.println("numero impares totales: "+ci);
     } 
 }
+/*}if(v[1]>=20 || v[2]>=20 || v[3]>=20 || v[4]>=20){
+                           if(v[1]>v[2] || v[1]>v[3] || v[1]>v[4]){
+                            System.out.println("el ganador fue: "+1);
+                            b=1;
+                           }else if(v[2]>v[1] || v[2]>v[3] || v[2]>v[4]){
+                            System.out.println("el ganador fue: "+2);
+                            b=1;                            
+                           }else if(v[3]>v[1] || v[3]>v[2] || v[3]>v[4]){
+                            System.out.println("el ganador fue: "+3);
+                            b=1;
+                           }else if(v[4]>v[1] || v[4]>v[2] || v[4]>v[3]){
+                            System.out.println("el ganador fue: "+4);
+                            b=1;
+                           }*/
+                         //b=1;
