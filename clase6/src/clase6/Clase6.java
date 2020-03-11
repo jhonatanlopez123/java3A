@@ -64,6 +64,20 @@ public class Clase6 {
       }
     }
      */
-  
+  //ejercicio #4
+   /*Scanner s = new Scanner(System.in);
+    int max=0,n=0,m=0,c=0;
+    System.out.println("escriba lacantidad de números: ");
+    max = s.nextInt();
+    for(c = 0;c < max;c++ ){
+        System.out.println("escriba un número: ");
+        n = s.nextInt();
+        if(c==0){
+           m=n;
+        }else if(n>m){
+           m=n;
+        }
     }
+    System.out.println("El numero mayor es "+m);*/
+  }
 }
