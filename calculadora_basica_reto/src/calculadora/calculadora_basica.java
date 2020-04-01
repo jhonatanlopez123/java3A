@@ -201,8 +201,8 @@ public class calculadora_basica extends javax.swing.JFrame {
     }//GEN-LAST:event_boton1ActionPerformed
 
     private void num1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num1ActionPerformed
-      // boton1.setEnabled(false); 
-       //boton2.setEnabled(false);        
+       boton1.setEnabled(false); 
+       boton2.setEnabled(false);        
     }//GEN-LAST:event_num1ActionPerformed
 
     private void boton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton2ActionPerformed
@@ -215,18 +215,23 @@ public class calculadora_basica extends javax.swing.JFrame {
     }//GEN-LAST:event_boton1KeyPressed
 
     private void num1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num1KeyPressed
-     
+        if (!"".equals(num1.getText()) && !"".equals(num2.getText())){
+          boton1.setEnabled(true); 
+          boton2.setEnabled(true); 
+    }else{
+          boton1.setEnabled(false); 
+          boton2.setEnabled(false); 
+        }
     }//GEN-LAST:event_num1KeyPressed
     
     private void num2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num2KeyPressed
-      if (num1.getText()=="" && num2.getText()==""){
-          boton1.setEnabled(false); 
-          boton2.setEnabled(false); 
-    }
-      if (num1.getText()!="" && num2.getText()!=""){
+      if (!"".equals(num1.getText()) && !"".equals(num2.getText())){
           boton1.setEnabled(true); 
           boton2.setEnabled(true); 
-    } 
+    }else{
+          boton1.setEnabled(false); 
+          boton2.setEnabled(false); 
+      }
     }//GEN-LAST:event_num2KeyPressed
 
     private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
