@@ -52,11 +52,6 @@ public class calculadora_basica extends javax.swing.JFrame {
                 boton1ActionPerformed(evt);
             }
         });
-        boton1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                boton1KeyPressed(evt);
-            }
-        });
 
         boton2.setText("mostrar numeros");
         boton2.setEnabled(false);
@@ -82,19 +77,20 @@ public class calculadora_basica extends javax.swing.JFrame {
             }
         });
         num1.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                num1KeyPressed(evt);
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                num1KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                num1KeyTyped(evt);
             }
         });
 
-        num2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                num2ActionPerformed(evt);
-            }
-        });
         num2.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                num2KeyPressed(evt);
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                num2KeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                num2KeyTyped(evt);
             }
         });
 
@@ -191,7 +187,6 @@ public class calculadora_basica extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
     
     private void boton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_boton1ActionPerformed
-        
         int n1=0,n2=0;
         int sum=0;
         n1= Integer.parseInt(num1.getText());
@@ -209,34 +204,34 @@ public class calculadora_basica extends javax.swing.JFrame {
         n1.setText(num1.getText());
         n2.setText(num2.getText());    
     }//GEN-LAST:event_boton2ActionPerformed
-
-    private void boton1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_boton1KeyPressed
-       
-    }//GEN-LAST:event_boton1KeyPressed
-
-    private void num1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num1KeyPressed
-        /*if (!"".equals(num1.getText()) && !"".equals(num2.getText())){
-          boton1.setEnabled(true); 
-          boton2.setEnabled(true); 
-    }else{
-          boton1.setEnabled(false); 
-          boton2.setEnabled(false); 
-        }*/
-    }//GEN-LAST:event_num1KeyPressed
     
-    private void num2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num2KeyPressed
-      if (!"".equals(num1.getText()) && !"".equals(num2.getText())){
-          boton1.setEnabled(true); 
-          boton2.setEnabled(true); 
-    }else{
-          boton1.setEnabled(false); 
-          boton2.setEnabled(false); 
-      }
-    }//GEN-LAST:event_num2KeyPressed
+    private void num1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num1KeyReleased
+        boton1.setEnabled(num1.getText().length() != 0 && num2.getText().length() != 0);
+        boton2.setEnabled(num1.getText().length() != 0 && num2.getText().length() != 0);
+    }//GEN-LAST:event_num1KeyReleased
 
-    private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
-        
-    }//GEN-LAST:event_num2ActionPerformed
+    private void num2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num2KeyReleased
+        boton1.setEnabled(num1.getText().length() != 0 && num2.getText().length() != 0);
+        boton2.setEnabled(num1.getText().length() != 0 && num2.getText().length() != 0);
+    }//GEN-LAST:event_num2KeyReleased
+
+    private void num1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num1KeyTyped
+        char nom = evt.getKeyChar();
+        if( Character.isDigit(nom)|| nom == ' '){
+        }else{
+           evt.consume();
+           getToolkit().beep();
+        } 
+    }//GEN-LAST:event_num1KeyTyped
+
+    private void num2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num2KeyTyped
+        char nom = evt.getKeyChar();
+        if( Character.isDigit(nom)|| nom == ' '){
+        }else{
+           evt.consume();
+           getToolkit().beep();
+        } 
+    }//GEN-LAST:event_num2KeyTyped
     
     /**
      * @param args the command line arguments
